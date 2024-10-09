@@ -1,11 +1,10 @@
 package com.flipfit.client;
 import com.flipfit.bean.FlipFitAdmin;
-
+import java.text.ParseException;
 import java.util.Scanner;
 
 public class ApplicationClient {
-    public void startFunction()
-    {
+    public void startFunction() throws ParseException {
         System.out.println("Welcome to FlipFit");
         Scanner sc=new Scanner(System.in);
         while(true)
@@ -20,10 +19,12 @@ public class ApplicationClient {
                 switch(val)
                 {
                     case 1:
-                        CustomerFlipFitMenu.register();
+                        CustomerFlipFitMenu customer=new CustomerFlipFitMenu();
+                        customer.register();
                         break;
                     case 2:
-                        GymOwnerFlipFitMenu.register();
+                        GymOwnerFlipFitMenu gym=new GymOwnerFlipFitMenu();
+                        gym.register();
                         break;
                     default:
                         System.out.println("Invalid");
@@ -38,13 +39,15 @@ public class ApplicationClient {
                 switch(val)
                 {
                     case 1:
-                        CustomerFlipFitMenu.login();
+                        CustomerFlipFitMenu customer=new CustomerFlipFitMenu();
+                        customer.login();
                         break;
                     case 2:
-                        GymOwnerFlipFitMenu.login();
+                        GymOwnerFlipFitMenu gym=new GymOwnerFlipFitMenu();
+                        gym.login();
                         break;
                     case 3:
-                        FlipFitAdmin.login();
+                        FlipFitAdminMenu.login();
                         break;
                     default:
                         System.out.println("Invalid");

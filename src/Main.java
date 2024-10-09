@@ -5,31 +5,34 @@ import com.flipfit.business.BookingBusiness;
 import com.flipfit.business.BookingInterface;
 
 import java.sql.SQLOutput;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.List;
-
+import com.flipfit.client.ApplicationClient;
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ParseException {
 
-        CustomerInterface business = new CustomerBusiness();
-        BookingInterface booking=new BookingBusiness();
-        business.login();
-        business.logout();
-        booking.makePayment();
-        List<FlipFitBookingDetails> bdet = booking.getBookingByCustomerId("priya@123");
-        System.out.println("Customer Details: ");
-        bdet.forEach(val -> {System.out.println(val.getBookingId());
-            System.out.println(val.getCentreName());
-            System.out.println(val.getCity());
-            System.out.println(val.getDate());
-        });
-        System.out.println("Register a customer :"+business.register());
-        System.out.println("View all Bookings: "+business.viewAllBookings());
-        System.out.println("View all Gyms : "+business.viewAllGyms());
-        System.out.println("View all Bookings : "+business.viewAllBookings());
-        System.out.println("Book a slot: "+business.bookSlot(1,1));
-        business.cancelBooking(1);
-        booking.checkBookingOverlap("1","2","12");
-        business.viewMyProfile(1);
+//        CustomerInterface business = new CustomerBusiness();
+//        BookingInterface booking=new BookingBusiness();
+//        business.login();
+//        business.logout();
+//        booking.makePayment();
+//        List<FlipFitBookingDetails> bdet = booking.getBookingByCustomerId("priya@123");
+//        System.out.println("Customer Details: ");
+//        bdet.forEach(val -> {System.out.println(val.getBookingId());
+//            System.out.println(val.getCentreName());
+//            System.out.println(val.getCity());
+//            System.out.println(val.getDate());
+//        });
+//        System.out.println("Register a customer :"+business.register());
+//        System.out.println("View all Bookings: "+business.viewAllBookings());
+//        System.out.println("View all Gyms : "+business.viewAllGyms());
+//        System.out.println("View all Bookings : "+business.viewAllBookings());
+//        System.out.println("Book a slot: "+business.bookSlot(1,1));
+//        business.cancelBooking(1);
+//        booking.checkBookingOverlap("1","2","12");
+//        business.viewMyProfile(1);
+        ApplicationClient a=new ApplicationClient();
+        a.startFunction();
     }
 }
