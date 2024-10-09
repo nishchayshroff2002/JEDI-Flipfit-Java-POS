@@ -1,6 +1,6 @@
 package com.flipfit.business;
 
-import com.flipfit.bean.BookingDetails;
+import com.flipfit.bean.FlipFitBookingDetails;
 
 import java.util.Collections;
 import java.util.List;
@@ -11,9 +11,9 @@ import java.util.List;
 public class BookingBusiness implements BookingInterface{
 
     @Override
-    public List<BookingDetails> getBookingByCustomerId(String username){
-        BookingDetails obj=new BookingDetails("kjdn","jd","nwd","delhi");
-        List<BookingDetails> bookings = Collections.singletonList(obj);
+    public List<FlipFitBookingDetails> getBookingByCustomerId(String username){
+        FlipFitBookingDetails obj=new FlipFitBookingDetails("kjdn","jd","nwd","delhi");
+        List<FlipFitBookingDetails> bookings = Collections.singletonList(obj);
         return bookings;
     }
 

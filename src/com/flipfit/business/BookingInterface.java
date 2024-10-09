@@ -1,6 +1,6 @@
 package com.flipfit.business;
 
-import com.flipfit.bean.BookingDetails;
+import com.flipfit.bean.FlipFitBookingDetails;
 
 import java.util.List;
 
@@ -16,7 +16,7 @@ public interface BookingInterface {
      * @param  username  the username of the customer
      * @return a list of BookingDetails objects representing the customer's bookings
      */
-    List<BookingDetails> getBookingByCustomerId(String username);
+    List<FlipFitBookingDetails> getBookingByCustomerId(String username);
 
     /**
      * Cancels a booking for the specified customer.

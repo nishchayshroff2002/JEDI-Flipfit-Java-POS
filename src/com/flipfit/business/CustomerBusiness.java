@@ -2,7 +2,6 @@ package com.flipfit.business;
 
 import com.flipfit.bean.*;
 
-import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.ArrayList;
@@ -48,15 +47,15 @@ public class CustomerBusiness implements  CustomerInterface{
     }
 
     @Override
-    public List<Gymcentre> viewAllGyms() {
+    public List<FlipFitGymCentre> viewAllGyms() {
         System.out.println("Here is the list of all gyms");
-        List<Gymcentre> gyms = new ArrayList<>();
+        List<FlipFitGymCentre> gyms = new ArrayList<>();
 
-        gyms.add(new Gymcentre("G1", "O1", "Fit Nation", "GST1234", "New York", 100, 1, 20.0f));
-        gyms.add(new Gymcentre("G2", "O2", "Power House Gym", "GST2345", "Los Angeles", 150, 1, 25.0f));
-        gyms.add(new Gymcentre("G3", "O3", "Flex Gym", "GST3456", "Chicago", 120, 0, 30.0f));
-        gyms.add(new Gymcentre("G4", "O4", "Iron Temple", "GST4567", "Miami", 80, 1, 15.0f));
-        gyms.add(new Gymcentre("G5", "O5", "Health Hub", "GST5678", "Dallas", 200, 1, 18.0f));
+        gyms.add(new FlipFitGymCentre("G1", "O1", "Fit Nation", "GST1234", "New York", 100, 1, 20.0f));
+        gyms.add(new FlipFitGymCentre("G2", "O2", "Power House Gym", "GST2345", "Los Angeles", 150, 1, 25.0f));
+        gyms.add(new FlipFitGymCentre("G3", "O3", "Flex Gym", "GST3456", "Chicago", 120, 0, 30.0f));
+        gyms.add(new FlipFitGymCentre("G4", "O4", "Iron Temple", "GST4567", "Miami", 80, 1, 15.0f));
+        gyms.add(new FlipFitGymCentre("G5", "O5", "Health Hub", "GST5678", "Dallas", 200, 1, 18.0f));
 
 
         return gyms;
@@ -86,18 +85,18 @@ public class CustomerBusiness implements  CustomerInterface{
     }
 
     @Override
-    public List<BookingDetails> viewAllBookings() {
+    public List<FlipFitBookingDetails> viewAllBookings() {
         System.out.println("Here is the list of all bookings");
 
-        List<BookingDetails> bookings = new ArrayList<>();
+        List<FlipFitBookingDetails> bookings = new ArrayList<>();
         // Creating dummy data for bookings
-        bookings.add(new BookingDetails("B001", "2024-10-10", "Fit Gym", "New York"));
-        bookings.add(new BookingDetails("B002", "2024-10-11", "Power House", "Los Angeles"));
-        bookings.add(new BookingDetails("B003", "2024-10-12", "Health Club", "Chicago"));
-        bookings.add(new BookingDetails("B004", "2024-10-13", "Wellness Center", "Miami"));
-        bookings.add(new BookingDetails("B005", "2024-10-14", "Elite Fitness", "Houston"));
-        bookings.add(new BookingDetails("B006", "2024-10-15", "Ultimate Gym", "San Francisco"));
-        bookings.add(new BookingDetails("B007", "2024-10-16", "City Gym", "Seattle"));
+        bookings.add(new FlipFitBookingDetails("B001", "2024-10-10", "Fit Gym", "New York"));
+        bookings.add(new FlipFitBookingDetails("B002", "2024-10-11", "Power House", "Los Angeles"));
+        bookings.add(new FlipFitBookingDetails("B003", "2024-10-12", "Health Club", "Chicago"));
+        bookings.add(new FlipFitBookingDetails("B004", "2024-10-13", "Wellness Center", "Miami"));
+        bookings.add(new FlipFitBookingDetails("B005", "2024-10-14", "Elite Fitness", "Houston"));
+        bookings.add(new FlipFitBookingDetails("B006", "2024-10-15", "Ultimate Gym", "San Francisco"));
+        bookings.add(new FlipFitBookingDetails("B007", "2024-10-16", "City Gym", "Seattle"));
 
 
 
@@ -111,7 +110,7 @@ public class CustomerBusiness implements  CustomerInterface{
     }
 
     @Override
-    public Customer viewMyProfile(int customerId) {
+    public FlipFitCustomer viewMyProfile(int customerId) {
         return null;
     }
 }

@@ -10,10 +10,10 @@ public interface CustomerInterface {
     public boolean register();
     public boolean login(String username,String password);
     public boolean logout();
-    public List<Gymcentre> viewAllGyms();
+    public List<FlipFitGymCentre> viewAllGyms();
     public List<Slot> viewAllSlots(int centerId, Date date);
     public boolean bookSlot(int slotId,int centerId);
-    public List<BookingDetails> viewAllBookings();
+    public List<FlipFitBookingDetails> viewAllBookings();
     public boolean cancelBooking(int bookingId);
-    public Customer viewMyProfile(int customerId);
+    public FlipFitCustomer viewMyProfile(int customerId);
 }

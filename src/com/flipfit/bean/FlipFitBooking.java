@@ -1,14 +1,14 @@
 package com.flipfit.bean;
 
-public class Booking {
+public class FlipFitBooking {
     private String bookingId;
     private String userId;
     private String scheduleId;
 
-    public Booking() {
+    public FlipFitBooking() {
     }
 
-    public Booking(String bookingId, String userId, String scheduleId) {
+    public FlipFitBooking(String bookingId, String userId, String scheduleId) {
         this.bookingId = bookingId;
         this.userId = userId;
         this.scheduleId = scheduleId;

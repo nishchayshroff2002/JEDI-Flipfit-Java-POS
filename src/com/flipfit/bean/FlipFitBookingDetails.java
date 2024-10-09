@@ -1,15 +1,13 @@
 
 package com.flipfit.bean;
 
-import java.sql.Date;
-
-public class BookingDetails {
+public class FlipFitBookingDetails {
     private String bookingId;
     private String date;
     private String centreName;
     private String city;
 
-    public BookingDetails(String bookingId, String date, String centreName, String city) {
+    public FlipFitBookingDetails(String bookingId, String date, String centreName, String city) {
         this.bookingId = bookingId;
         this.date = date;
         this.centreName = centreName;
