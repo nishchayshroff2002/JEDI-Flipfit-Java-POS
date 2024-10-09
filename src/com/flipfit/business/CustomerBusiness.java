@@ -57,7 +57,6 @@ public class CustomerBusiness implements  CustomerInterface{
         gyms.add(new FlipFitGymCentre("G4", "O4", "Iron Temple", "GST4567", "Miami", 80, 1, 15.0f));
         gyms.add(new FlipFitGymCentre("G5", "O5", "Health Hub", "GST5678", "Dallas", 200, 1, 18.0f));
 
-
         return gyms;
     }
 
@@ -71,7 +70,7 @@ public class CustomerBusiness implements  CustomerInterface{
         slots.add(new Slot(3, "G1", LocalDate.of(2024, 10, 10), LocalTime.of(8, 0), 5));
         slots.add(new Slot(4, "G2", LocalDate.of(2024, 10, 11), LocalTime.of(5, 30), 12));
         slots.add(new Slot(5, "G2", LocalDate.of(2024, 10, 11), LocalTime.of(6, 30), 6));
-        slots.add(new Slot(6, "G2", LocalDate.of(2024, 10, 11), LocalTime.of(7, 30), 0)); // Fully booked
+        slots.add(new Slot(6, "G2", LocalDate.of(2024, 10, 11), LocalTime.of(7, 30), 0));
         slots.add(new Slot(7, "G3", LocalDate.of(2024, 10, 12), LocalTime.of(9, 0), 15));
 
         return slots;
@@ -111,6 +110,7 @@ public class CustomerBusiness implements  CustomerInterface{
 
     @Override
     public FlipFitCustomer viewMyProfile(int customerId) {
+        System.out.println("Customer profile viewed successfully");
         return null;
     }
 }

@@ -25,7 +25,7 @@ public class Main {
         });
         System.out.println("Register a customer :"+business.register());
         System.out.println("View all Bookings: "+business.viewAllBookings());
-        System.out.println("View all Gyms : "+business.viewAllGyms()    );
+        System.out.println("View all Gyms : "+business.viewAllGyms());
         System.out.println("View all Bookings : "+business.viewAllBookings());
         System.out.println("Book a slot: "+business.bookSlot(1,1));
         business.cancelBooking(1);
