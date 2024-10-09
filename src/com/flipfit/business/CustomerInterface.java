@@ -8,7 +8,7 @@ import java.util.List;
 public interface CustomerInterface {
 
     public boolean register();
-    public boolean login(String username,String password);
+    public boolean login();
     public boolean logout();
     public List<FlipFitGymCentre> viewAllGyms();
     public List<Slot> viewAllSlots(int centerId, Date date);

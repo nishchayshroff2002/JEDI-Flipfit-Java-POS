@@ -9,7 +9,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Scanner;
 
-public class CustomerBusiness implements  CustomerInterface{
+public class CustomerBusiness implements CustomerInterface {
 
     public static Scanner scanner = new Scanner(System.in);
 
@@ -35,7 +35,12 @@ public class CustomerBusiness implements  CustomerInterface{
     }
 
     @Override
-    public boolean login(String username, String password) {
+    public boolean login() {
+        System.out.println("Enter your UserName");
+        String userName = scanner.next();
+
+        System.out.println("Enter your Password");
+        String password = scanner.next();
         System.out.println("Customer logged in successfullly");
         return true;
     }
@@ -88,7 +93,7 @@ public class CustomerBusiness implements  CustomerInterface{
         System.out.println("Here is the list of all bookings");
 
         List<FlipFitBookingDetails> bookings = new ArrayList<>();
-        // Creating dummy data for bookings
+
         bookings.add(new FlipFitBookingDetails("B001", "2024-10-10", "Fit Gym", "New York"));
         bookings.add(new FlipFitBookingDetails("B002", "2024-10-11", "Power House", "Los Angeles"));
         bookings.add(new FlipFitBookingDetails("B003", "2024-10-12", "Health Club", "Chicago"));
@@ -96,8 +101,6 @@ public class CustomerBusiness implements  CustomerInterface{
         bookings.add(new FlipFitBookingDetails("B005", "2024-10-14", "Elite Fitness", "Houston"));
         bookings.add(new FlipFitBookingDetails("B006", "2024-10-15", "Ultimate Gym", "San Francisco"));
         bookings.add(new FlipFitBookingDetails("B007", "2024-10-16", "City Gym", "Seattle"));
-
-
 
         return bookings;
     }
@@ -113,4 +116,6 @@ public class CustomerBusiness implements  CustomerInterface{
         System.out.println("Customer profile viewed successfully");
         return null;
     }
+
+
 }

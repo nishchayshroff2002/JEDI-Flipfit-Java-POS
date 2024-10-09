@@ -13,7 +13,7 @@ public class Main {
 
         CustomerInterface business = new CustomerBusiness();
         BookingInterface booking=new BookingBusiness();
-        business.login("Sneha","Sneha@123");
+        business.login();
         business.logout();
         booking.makePayment();
         List<FlipFitBookingDetails> bdet = booking.getBookingByCustomerId("priya@123");
