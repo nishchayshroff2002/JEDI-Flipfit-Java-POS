@@ -1,6 +1,8 @@
 
 package com.flipfit.bean;
 
+import java.sql.Date;
+
 public class BookingDetails {
     private String bookingId;
     private String date;

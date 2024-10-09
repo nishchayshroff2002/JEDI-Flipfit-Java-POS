@@ -1,6 +1,6 @@
 package com.flipfit.bean;
 
-public class FlipAdmin {
+public class Admin {
     private int userId;
     private String password;
     private String emailID;
