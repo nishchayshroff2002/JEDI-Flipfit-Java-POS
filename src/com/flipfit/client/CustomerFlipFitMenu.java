@@ -16,10 +16,24 @@ public class CustomerFlipFitMenu {
 
     public void login(){
         customerService.login();
+        if (true) {
+            System.out.println("---------------------------------------------------------------------------");
+            System.out.println("Successfully logged in as Customer ");
+            customerClientMainPage();
+        } else {
+            System.out.println("Invalid credentials");
+        }
         return;
     }
     public void register(){
         customerService.register();
+        if (true) {
+            System.out.println("---------------------------------------------------------------------------");
+            System.out.println("Successfully registered as customer");
+            customerClientMainPage();
+        } else {
+            System.out.println("Invalid credentials");
+        }
         return;
     }
 

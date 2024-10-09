@@ -21,7 +21,7 @@ public class GymOwnerFlipFitMenu {
         return true;
     }
 
-    public boolean register() throws ParseException {
+    public static boolean register() throws ParseException {
         System.out.println("Enter your username: ");
         String userName = scanner.nextLine();
         System.out.println("Enter your password: ");
