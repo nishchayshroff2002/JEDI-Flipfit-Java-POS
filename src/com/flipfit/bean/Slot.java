@@ -5,6 +5,14 @@ public class Slot {
     private int slotId;
     private String gyn_id;
 
+    public Slot(int slotId, String gyn_id, LocalDate slot_date, LocalTime slot_time, int avaiLableSeats) {
+        this.slotId = slotId;
+        this.gyn_id = gyn_id;
+        this.slot_date = slot_date;
+        this.slot_time = slot_time;
+        this.avaiLableSeats = avaiLableSeats;
+    }
+
     public String getGyn_id() {
         return gyn_id;
     }

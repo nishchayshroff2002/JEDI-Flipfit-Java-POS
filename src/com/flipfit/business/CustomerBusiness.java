@@ -1,10 +1,10 @@
 package com.flipfit.business;
 
-import com.flipfit.bean.Customer;
-import com.flipfit.bean.GymOwner;
-import com.flipfit.bean.Gymcentre;
-import com.flipfit.bean.Slot;
+import com.flipfit.bean.*;
 
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -50,30 +50,33 @@ public class CustomerBusiness implements  CustomerInterface{
     @Override
     public List<Gymcentre> viewAllGyms() {
         System.out.println("Here is the list of all gyms");
-        List<String> gyms = new ArrayList<>();
-        gyms.add("Fit Nation");
-        gyms.add("Power House Gym");
-        gyms.add("Flex Gym");
-        gyms.add("Iron Temple");
-        gyms.add("Health Hub");
+        List<Gymcentre> gyms = new ArrayList<>();
+
+        gyms.add(new Gymcentre("G1", "O1", "Fit Nation", "GST1234", "New York", 100, 1, 20.0f));
+        gyms.add(new Gymcentre("G2", "O2", "Power House Gym", "GST2345", "Los Angeles", 150, 1, 25.0f));
+        gyms.add(new Gymcentre("G3", "O3", "Flex Gym", "GST3456", "Chicago", 120, 0, 30.0f));
+        gyms.add(new Gymcentre("G4", "O4", "Iron Temple", "GST4567", "Miami", 80, 1, 15.0f));
+        gyms.add(new Gymcentre("G5", "O5", "Health Hub", "GST5678", "Dallas", 200, 1, 18.0f));
+
+
         return gyms;
     }
 
     @Override
     public List<Slot> viewAllSlots(int centerId, Date date) {
         System.out.println("Here is the list of all slots");
-        List<String> slots = new ArrayList<>();
+        List<Slot> slots = new ArrayList<>();
 
-        slots.add("6:00 AM");
-        slots.add("7:00 AM");
-        slots.add("8:00 AM");
-        slots.add("9:00 AM");
-        slots.add("10:00 AM");
-        slots.add("4:00 PM");
-        slots.add("5:00 PM");
-        slots.add("6:00 PM");
-        slots.add("7:00 PM");
+        slots.add(new Slot(1, "G1", LocalDate.of(2024, 10, 10), LocalTime.of(6, 0), 10));
+        slots.add(new Slot(2, "G1", LocalDate.of(2024, 10, 10), LocalTime.of(7, 0), 8));
+        slots.add(new Slot(3, "G1", LocalDate.of(2024, 10, 10), LocalTime.of(8, 0), 5));
+        slots.add(new Slot(4, "G2", LocalDate.of(2024, 10, 11), LocalTime.of(5, 30), 12));
+        slots.add(new Slot(5, "G2", LocalDate.of(2024, 10, 11), LocalTime.of(6, 30), 6));
+        slots.add(new Slot(6, "G2", LocalDate.of(2024, 10, 11), LocalTime.of(7, 30), 0)); // Fully booked
+        slots.add(new Slot(7, "G3", LocalDate.of(2024, 10, 12), LocalTime.of(9, 0), 15));
+
         return slots;
+
     }
 
     @Override
@@ -83,18 +86,21 @@ public class CustomerBusiness implements  CustomerInterface{
     }
 
     @Override
-    public List<Bookings> viewAllBookings() {
+    public List<BookingDetails> viewAllBookings() {
         System.out.println("Here is the list of all bookings");
-        List<String> bookings = new ArrayList<>();
-        bookings.add("6:00 AM - John Doe");
-        bookings.add("7:00 AM - Jane Smith");
-        bookings.add("8:00 AM - Alex Johnson");
-        bookings.add("9:00 AM - Emily Davis");
-        bookings.add("10:00 AM - Michael Brown");
-        bookings.add("4:00 PM - Sarah Wilson");
-        bookings.add("5:00 PM - David Lee");
-        bookings.add("6:00 PM - Anna Taylor");
-        bookings.add("7:00 PM - Chris Martin");
+
+        List<BookingDetails> bookings = new ArrayList<>();
+        // Creating dummy data for bookings
+        bookings.add(new BookingDetails("B001", "2024-10-10", "Fit Gym", "New York"));
+        bookings.add(new BookingDetails("B002", "2024-10-11", "Power House", "Los Angeles"));
+        bookings.add(new BookingDetails("B003", "2024-10-12", "Health Club", "Chicago"));
+        bookings.add(new BookingDetails("B004", "2024-10-13", "Wellness Center", "Miami"));
+        bookings.add(new BookingDetails("B005", "2024-10-14", "Elite Fitness", "Houston"));
+        bookings.add(new BookingDetails("B006", "2024-10-15", "Ultimate Gym", "San Francisco"));
+        bookings.add(new BookingDetails("B007", "2024-10-16", "City Gym", "Seattle"));
+
+
+
         return bookings;
     }
 
