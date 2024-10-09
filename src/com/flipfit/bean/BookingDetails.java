@@ -5,11 +5,11 @@ import java.sql.Date;
 
 public class BookingDetails {
     private String bookingId;
-    private Date date;
+    private String date;
     private String centreName;
     private String city;
 
-    public BookingDetails(String bookingId, Date date, String centreName, String city) {
+    public BookingDetails(String bookingId, String date, String centreName, String city) {
         this.bookingId = bookingId;
         this.date = date;
         this.centreName = centreName;
@@ -21,7 +21,7 @@ public class BookingDetails {
         return bookingId;
     }
 
-    public Date getDate() {
+    public String getDate() {
         return date;
     }
 

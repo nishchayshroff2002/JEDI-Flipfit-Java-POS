@@ -13,7 +13,7 @@ public interface CustomerInterface {
     public List<Gymcentre> viewAllGyms();
     public List<Slot> viewAllSlots(int centerId, Date date);
     public boolean bookSlot(int slotId,int centerId);
-    public List<Booking> viewAllBookings();
+    public List<BookingDetails> viewAllBookings();
     public boolean cancelBooking(int bookingId);
     public Customer viewMyProfile(int customerId);
 }
