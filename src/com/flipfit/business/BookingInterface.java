@@ -18,11 +18,11 @@ public interface BookingInterface {
      */
     List<FlipFitBookingDetails> getBookingByCustomerId(String username);
 
+    public boolean checkBookingOverlap(String customerID,String date,String time);
     /**
      * Cancels a booking for the specified customer.
      *
      * @param  bookingID  the ID of the booking to be cancelled
      */
-    void cancelBooking(String bookingID);
-
+    public boolean makePayment();
 }

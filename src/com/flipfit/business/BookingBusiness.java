@@ -10,15 +10,24 @@ import java.util.List;
  */
 public class BookingBusiness implements BookingInterface{
 
+
     @Override
     public List<FlipFitBookingDetails> getBookingByCustomerId(String username){
-        FlipFitBookingDetails obj=new FlipFitBookingDetails("kjdn","jd","nwd","delhi");
+
+        FlipFitBookingDetails obj=new FlipFitBookingDetails("23","30/10/24","Banglore","delhi");
         List<FlipFitBookingDetails> bookings = Collections.singletonList(obj);
         return bookings;
     }
 
     @Override
-    public void cancelBooking(String bookingID) {
-        System.out.println("This is the booking service");
+    public boolean checkBookingOverlap(String customerID, String date, String time) {
+        System.out.println("This is my booking overlap");
+        return true;
+    }
+
+    @Override
+    public boolean makePayment() {
+        System.out.println("This is my payment function");
+        return true;
     }
 }
