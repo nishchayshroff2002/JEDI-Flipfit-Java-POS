@@ -1,12 +1,11 @@
 package com.flipfit.client;
 
-import java.text.ParseException;
 import java.util.Scanner;
 
 public class GymOwnerFlipFitMenu {
     public static Scanner scanner = new Scanner(System.in);
 
-    public boolean login() throws ParseException {
+    public void login()  {
         System.out.println("Enter your username: ");
         String userName = scanner.nextLine();
         System.out.println("Enter your password: ");
@@ -18,10 +17,9 @@ public class GymOwnerFlipFitMenu {
         } else {
             System.out.println("Invalid credentials");
         }
-        return true;
     }
 
-    public static boolean register() throws ParseException {
+    public void register()  {
         System.out.println("Enter your username: ");
         String userName = scanner.nextLine();
         System.out.println("Enter your password: ");
@@ -31,12 +29,11 @@ public class GymOwnerFlipFitMenu {
             System.out.println("Successfully registered  as Gym Owner");
             gymOwnerClientMainPage(userName, password);
         }
-        return true;
     }
 
 
 
-    public void gymOwnerClientMainPage(String userName, String password) throws ParseException {
+    public void gymOwnerClientMainPage(String userName, String password)  {
         System.out.println("Welcome to gym owner main page!!");
         while (true) {
             System.out.println("---------------------------------------------------------------------------");
